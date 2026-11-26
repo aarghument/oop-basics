@@ -42,9 +42,9 @@ class TestSavingsWithdraw:
              pytest.raises(AccountFrozenError)),
 
             # Закрытый счёт
-            ("closed_savings_account", "100", "2000",
+            ("closed_savings_account", "100", "0",
              pytest.raises(AccountClosedError)),
-            ("closed_savings_account", "10001", "2000",
+            ("closed_savings_account", "10001", "0",
              pytest.raises(AccountClosedError)),
         ],
     )
