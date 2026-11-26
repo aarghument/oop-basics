@@ -63,9 +63,9 @@ class TestMonthlyInterestClosedAccount:
     @pytest.mark.parametrize(
         "account_fixture, balance, rate, expectation",
         [
-            ("closed_savings_account","2000", "0.02", pytest.raises(AccountClosedError)),
-            ("closed_savings_account", "2000", "0",  pytest.raises(AccountClosedError)),
-            ("closed_savings_account", "2000", "0.02", pytest.raises(AccountClosedError)),
+            ("closed_savings_account","0", "0.02", pytest.raises(AccountClosedError)),
+            ("closed_savings_account", "0", "0",  pytest.raises(AccountClosedError)),
+            ("closed_savings_account", "0", "0.02", pytest.raises(AccountClosedError)),
         ],
     )
     def test_monthly_interest(

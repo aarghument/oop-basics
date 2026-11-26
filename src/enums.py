@@ -13,3 +13,9 @@ class Currency(StrEnum):
     EUR = "EUR"
     KZT = "KZT"
     CNY = "CNY"
+
+
+class AssetType(StrEnum):
+    STOCKS = "stocks"
+    BONDS = "bonds"
+    ETF = "etf"
