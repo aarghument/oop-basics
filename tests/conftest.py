@@ -3,11 +3,11 @@ from decimal import Decimal
 import pytest
 
 from src.accounts.bank_account import BankAccount
-from src.enums import AccountStatus, Currency
+from src.enums import Currency, AccountStatus
 from src.models import AccountOwner
 
 
-@pytest.fixture(scope='session')
+@pytest.fixture(scope="module")
 def owner():
     return AccountOwner(
         full_name='Иван Иванов',
